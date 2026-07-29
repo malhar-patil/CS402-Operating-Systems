@@ -28,4 +28,26 @@ To verify kernel stability and correctness across all three layers, the system w
 ### 1. File System Integrity (`vfstest`)
 Validates the Virtual File System and underlying S5FS disk driver by stress-testing path resolution, directory creation and removal, file reads and writes, and file descriptor limits.
 
-![VFS TEST]('')
+<img src="assets/vfstest.gif" width="800" alt="VFS TEST">
+
+### 2. Virtual Memory & Heap Allocation (`memtest`)
+Tests the Virtual Memory layer's ability to handle dynamic memory allocation, process heap expansion (`brk`/`sbrk`), memory mapping (`mmap`), and page unmapping without memory leaks.
+
+<img src="assets/memtest.gif" width="800" alt="VFS TEST">
+
+### 3. Memory Pressure & Frame Allocation (`eatmem`)
+Pushes physical page allocation to its absolute limit to verify that the kernel's page frame allocator safely handles low-memory constraints and cleans up allocations cleanly.
+
+<img src="assets/eatmem.gif" width="800" alt="VFS TEST">
+
+### 4. Process Creation & Reaping (`forkbomb`)
+Rapidly spawns child processes to stress-test process table bounds, page table duplication during process cloning (`fork`), and parent-child process reaping (`waitpid`).
+
+<img src="assets/forkbomb.gif" width="800" alt="VFS TEST">
+
+### 5. Interactive Shell Demo
+Demonstrates the fully booted Weenix kernel executing standard file system utilities (`/bin/ls`, `/bin/cat`, `mkdir`, `echo`) directly within the interactive userland shell.
+
+<video src = "https://github.com/user-attachments/assets/b0f3f9ed-d18d-4a93-b734-95d3ab56b721" autoplay loop muted playsinline controls></video>
+
+
