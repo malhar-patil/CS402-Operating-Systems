@@ -7,6 +7,9 @@ Weenix is a small, Unix-like operating system kernel running on x86 architecture
 > **Note on Academic Integrity:**
 Due to course academic integrity policies, the source code is maintained in a private repository. Access can be provided to prospective employers and recruiters upon request.
 
+## Contributors
+Developed collaboratively by **[Malhar Patil](https://github.com/malhar-patil)** and **[Ji Hwan Moon](https://github.com/jmoon98)**
+
 ## Kernel Architecture
 This was a semester long project where we worked on three different parts of kernel architecture
 ### 1. Processes & Threads
@@ -46,7 +49,7 @@ Rapidly spawns child processes to stress-test process table bounds, page table d
 <img src="assets/forkbomb.gif" width="800" alt="VFS TEST">
 
 ### 5. Interactive Shell Demo
-Demonstrates the fully booted Weenix kernel executing standard file system utilities (`/bin/ls`, `/bin/cat`, `mkdir`, `echo`) directly within the interactive userland shell.
+Demonstrates the fully booted Weenix kernel executing standard file system utilities (`/bin/ls`, `cat`, `mkdir`, `echo`) directly within the interactive userland shell.
 
 <video src = "https://github.com/user-attachments/assets/b0f3f9ed-d18d-4a93-b734-95d3ab56b721" autoplay loop muted playsinline controls></video>
 
